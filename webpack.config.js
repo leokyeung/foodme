@@ -8,8 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, './client/dist'),
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.jsx$/,
         include: SRC_DIR,
         use: {
@@ -18,7 +17,13 @@ module.exports = {
             presets: ['@babel/preset-react', '@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.css$/,
+        include: SRC_DIR,
+        use: ['style-loader', 'css-loader']
       }
+
     ]
   }
 };
