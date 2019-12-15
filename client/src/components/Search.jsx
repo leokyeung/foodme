@@ -15,6 +15,7 @@ class Search extends React.Component {
         this.handleOnInputChange = this.handleOnInputChange.bind(this);
         this.cancel = '';
         this.fetchSearchResults = this.fetchSearchResults.bind(this);
+        this.addFoodDB = this.addFoodDB.bind(this);
     }
 
     fetchSearchResults(query) {
@@ -67,6 +68,18 @@ class Search extends React.Component {
         })
     }
 
+    addFoodDB(e) {
+        e.preventDefault();
+        let obj = this.state.results[0]
+        
+        $.ajax({
+          type: 'POST',
+          url: "/food",
+          data: obj,
+          success: this.props.getfood
+        })
+    }
+
     render() {
         // getting the value from this.state.query
         let { query } = this.state;
@@ -91,9 +104,11 @@ class Search extends React.Component {
                         key={item.ndb_no}
                         query={query}
                         results={item}
+                        addFood={this.addFoodDB}
                         />
 
                     })}
+                    
                     
 
                 </div>
