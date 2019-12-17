@@ -71,13 +71,14 @@ class Search extends React.Component {
     addFoodDB(e) {
         e.preventDefault();
         let obj = this.state.results[0]
-        
+
         $.ajax({
           type: 'POST',
           url: "/food",
           data: obj,
           success: this.props.getfood
-        })
+        });
+        this.props.changeToTrue();
     }
 
     render() {

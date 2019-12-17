@@ -18,4 +18,8 @@ app.post('/food', (req, res) => {
     controller.addFood(req, res);
 })
 
+app.delete('/delete', (req, res) => {
+    controller.deleteFood(req, res);
+})
+
 app.listen(port, () => console.log(`Foodme is listening on port ${port}!`))

@@ -8,9 +8,13 @@ var TotalCalories = (props) => {
         0
     );
 
+    const totalCal = props.dailyCal;
+    const percent = Math.floor(100*(total/totalCal));
+
     return (
         <div>
-            <h2 className="foodheading">You already ate this much calories: {total}</h2>
+            <h2 className="foodheading">Total calories consumed: {total}</h2>
+            <h2 className="foodheading">You have already met {percent}% of {totalCal} calories</h2>
         </div>
     )
 

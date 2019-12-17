@@ -19,6 +19,16 @@ module.exports = {
                 res.send(data);
             }
         });
+    },
+
+    deleteFood: (req, res) => {
+        Models.deleteFood(req.body, (err, data) => {
+            if (err) {
+                res.status(400).send(err);
+            } else {
+                res.send(data);
+            }
+        })
     }
 
 

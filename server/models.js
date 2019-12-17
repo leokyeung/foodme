@@ -33,6 +33,21 @@ module.exports = {
       }
     })
 
+  },
+
+  deleteFood: (data, callback) => {
+    console.log(data.id)
+    const query = `delete from foodlist where id=${data.id};`
+
+    connection.query(query, function (err, results) {
+      if (err) {
+        callback(err)
+      } else {
+
+        callback(null, results);
+      }
+    })
+
   }
 
 }
