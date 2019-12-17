@@ -1,4 +1,5 @@
-## Foodme is a calorie tracker where users can track the total calories of the food they consume of the day.
+## Foodme 
+### A calorie tracker where users can track the total calories of the food they consume of the day.
 
 1. User sets the daily calories intake
 
@@ -17,4 +18,4 @@ NodeJS
 Express
 
 **Database:**
-MySql
+MySQL
