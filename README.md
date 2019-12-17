@@ -11,10 +11,10 @@
 ## Technology used:
 
 **Front-end:**
-React
+React.js
 
 **Back-end:**
-NodeJS
+NodeJS, 
 Express
 
 **Database:**
